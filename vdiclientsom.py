@@ -769,9 +769,9 @@ def showvms():
 		return False
 	layout = setvmlayout(vms)
 	if G.icon:
-		window = sg.Window(G.title, layout, return_keyboard_events=True, finalize=True, resizable=False, no_titlebar=G.kiosk, size=(G.width, G.height), icon=G.icon)
+		window = sg.Window(G.title, layout, return_keyboard_events=True, finalize=True, resizable=False, no_titlebar=G.kiosk, size=(screen_width, screen_height), icon=G.icon)
 	else:
-		window = sg.Window(G.title, layout, return_keyboard_events=True, finalize=True, resizable=False, size=(G.width, G.height), no_titlebar=G.kiosk)
+		window = sg.Window(G.title, layout, return_keyboard_events=True, finalize=True, resizable=False, size=(screen_width, screen_height), no_titlebar=G.kiosk)
 	timer = datetime.now()
 	while True:
 		if (datetime.now() - timer).total_seconds() > 5:
